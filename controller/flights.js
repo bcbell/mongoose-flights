@@ -7,7 +7,7 @@ module.exports= {
 
 function index(req, res){
     Flight.find({}, function(err, flights){
-        res.render('flights/index', {title: 'Flight Search',flights:flights})
+        res.render('flights/index', {title: 'Flight Log',flights:flights})
     })
 }
 

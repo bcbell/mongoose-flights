@@ -4,17 +4,15 @@ body {
   font-family: 'Libre Baskerville', serif;
   background-color: black;
   background-image: url("https://i.imgur.com/wyF88ak.png");
-  background-position: center;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: white;
 }
-
 a {
   color: rgba(128, 128, 128, 0.579);
   -webkit-text-stroke: 1px blue
-}
-body.flightsIndex{
-  background-image: url("https://i.imgur.com/AYGXNUC.png");
-  background-position: center;
 }
 header{
   border: 5px solid black; 
@@ -34,4 +32,9 @@ nav{
   display: flex;
   justify-content: space-around;
 
+}
+/* Error Page */
+h2.errorStatus{
+  display: flex;
+  justify-content: center;
 }

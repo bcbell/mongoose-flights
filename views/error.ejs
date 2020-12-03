@@ -1,3 +1,23 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+ 
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <h2 class= errorStatus>Error Status: <%= error.status %></h2>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/flights">Flight Log </a>
+        <a href="/flights/new">Flight Search</a>
+      </nav>
+    </header>
+<!-- <h1><%= message %></h1> -->
+<!-- <pre><%= error.stack %></pre> -->
+</body>
+</html>
