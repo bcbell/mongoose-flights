@@ -2,10 +2,24 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+ 
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <h1><%= title %></h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/flights">Flight </a>
+      </nav>
+    </header>  
+      <br> 
+      <br>
+      <p class = "welcome">Welcome to the <%= title %></p>
+
+    
+  
   </body>
 </html>
