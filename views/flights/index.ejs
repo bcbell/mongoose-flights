@@ -19,22 +19,20 @@
         </nav>
       </header> 
     <section class = "flightLog">
-       
-          
-        <table>
-            <tr>
+        <table class="flightTable" >
+            <tr class="flightTableHeading">
             
                 <th>Airline</th>
                 <th>Airport</th>
                 <th>Flight Departure Number</th>
                 <th>Departure Date & Time</th>
             </tr>
-            <tr>
+            <tr class="flightrow">
             <% flights.forEach(function(flight){%>
-                <td><%=flight.airline%></td> 
-                <td><%=flight.airport%></td>
-                <td><%=flight.flightNo%></td>
-                <td><%=flight.departs%></td> 
+                <td class="airline"><%=flight.airline%></td> 
+                <td class="airport"><%=flight.airport%></td>
+                <td class= "flightNo"><%=flight.flightNo%></td>
+                <td class="departs"><%=flight.departs%></td> 
             
              </tr>
              <% }) %>  

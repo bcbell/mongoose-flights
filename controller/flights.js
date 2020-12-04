@@ -18,9 +18,11 @@ function newSearch(req, res){
     res.render('flights/new', {title:"Flight Search", err:''})
 
 }
-function create (req, res){
+function create (req, res, next){
     Flight.create(req.body)
+    if(req.body.departs) req.body.departs > Date.now()+ 365*24*60*60000             
     res.redirect('/flights')
+    
 }
 
 function show(req, res){

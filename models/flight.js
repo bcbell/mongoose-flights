@@ -10,8 +10,8 @@ const flightSchema = new Schema({
     airline: {type: String, enum:['American', 'Southwest', 'United', 'Delta', 'jetBlue', 'Frontier', 'Spirit'], default:''},
     airport: {type: String, enum:['AUS', 'DFW', 'DEN', 'LAX', 'SAN','ATL', 'JFK'], default: 'DEN'},
     flightNo:{type: Number, required: [true,'Please enter your flight number'], min:10, max:9999, default: ''},
-    departs: {type:Date, max: oneYearLater, default: new Date(Date.now()+365*24*60*60*1000)}
-}) 
+    departs: {type:Date,  max: [oneYearLater, "Please select another date less than one calendar year"],default: new Date(Date.now()+365*24*60*60*1000)} 
+})
  
 
 module.exports= mongoose.model('Flight', flightSchema)

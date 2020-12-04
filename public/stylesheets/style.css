@@ -74,3 +74,21 @@ input.flightLocator{
   box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.25);
   border: 2px solid blue;
 }
+/* Flight Log */
+table.flightTable{
+  background-color: white ;
+  color: blue;
+  border: 5px solid black;
+  margin-top: 20px;
+ 
+}
+th{
+  border: solid 2px black;
+  padding: 0px 50px 0px 50px;
+  text-align: center;
+  width: 100%;
+}
+td{
+  border: solid 2px black;
+  text-align: center;
+}
