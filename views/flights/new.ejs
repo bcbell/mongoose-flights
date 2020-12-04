@@ -18,7 +18,7 @@
         </nav>
       </header> 
       <section>
-        <form class=flightLocator action="/flights" method="POST"> 
+        <form class=flightLocator action="/flights" method="POST" name="flightInfo"> 
          <br> Choose a departure location:<select name="airport" class="flightLocator">
            <optgroup label="Colorado">
             <option value="DEN">Denver, CO- Denver International</option>
@@ -37,9 +37,27 @@
             <option value="AUS">Austin, TX- Austin Bergstrom International</option>
             <option value="DFW">Dallas/Fort Worth, TX- Dallas/Forth International</option>
             </optgroup>
-          </select> 
+        </select> 
+        <br>
+        Choose an airline:
+        <select name="airline"class="flightLocate">
+          <option value= "Delta">Delta</option>
+          <option value="American">American Airlines</option>
+          <option value="Southwest">Southwest Airlines</option>
+          <option value="United"> United</option>
+          <option value="jetBlue">jetBlue</option>
+          <option value="Frontier">Frontier Airlines</option>
+          <option value="Spirit">Spirit Airlines</option>
+        </select>
+        <br>
+        *Flight Number: <input class="flightLocation" type="number" name="flightNo" min= "10" max= "9999" required>
+        <br>
+          Departure Date/Time:<input class= "flightLocate" type="datetime-local" name="departs" placeholder="Departure Date/Time">
           <br>
-          Departure Date/Time:<input class= "flightLocator" type="datetime-local" name="departs">
-          <button class="flightLocator" type="submit">Submit</button>
+        <input class="flightLocator" type="submit" value="Submit">
+       
         </form>
       </section>
+  
+        
+    
