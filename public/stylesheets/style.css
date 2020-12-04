@@ -38,3 +38,27 @@ h2.errorStatus{
   display: flex;
   justify-content: center;
 }
+/*Flight Search-new */
+select.flightLocator{
+  color: blue;
+  border-style: 5% inset black;
+}
+input.flightLocator{
+  color: blue;
+}
+form.flightLocator{
+  display: flex;
+  justify-self: center;
+  padding-top: 20px;
+}
+button.flightLocator{
+  border-radius: 50%;
+  padding: 15px 30px 15px 30px;
+  background-color: grey;
+  border-right-color: lightblue;
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.25);
+  border: 2px solid blue;
+}
