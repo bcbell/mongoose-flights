@@ -10,6 +10,10 @@ body {
   font-variant-caps: petite-caps;
   color: white;
 }
+body.indexPage{
+ background-image: url(https://i.imgur.com/4R775Uv.mp4);
+ background-attachment: fixed;
+}
 a {
   color: rgba(128, 128, 128, 0.579);
   -webkit-text-stroke: 1px blue
@@ -20,6 +24,13 @@ header{
   box-shadow: inset 10px 10px 90px 90px rgba(111, 111, 236, 0.661);
   -webkit-text-stroke: .75px blue;
   opacity: 75%;
+}
+header.indexPage{
+  width: 100%;
+ 
+}
+video.indexPage{
+  width: 100%;
 }
 h1{
   display: flex;
