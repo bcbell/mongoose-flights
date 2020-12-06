@@ -94,4 +94,15 @@ th{
 td{
   border: solid 2px black;
   text-align: center;
+  font-variant-caps: petite-caps;
+}
+
+/* Flight Details- show page */
+
+p.flightDetails{
+  text-align: center;
+  color: white;
+  font-variant-caps: petite-caps;
+  text-decoration-line:  underline;
+  font-weight: bold;
 }

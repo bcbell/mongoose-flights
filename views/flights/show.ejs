@@ -19,6 +19,8 @@
         </nav>
       </header> 
 
+      <p class="flightDetails">Please review & confirm the flight details below</p>
+
       <table class="flightTable" >
         <tr class="flightTableHeading">
         
@@ -39,6 +41,10 @@
           <td><%= flights.departs  %> </td>
           <td><%= flights.returns  %> </td>
         </tr>
-
+        <section>
+<p>Book a flight</p>
+        <form class="ticketingInfo" action="flights/<%=flights.id%>/tickets" method="POST" > 
+        </form>
+        </section>
 </body>
 </html>
