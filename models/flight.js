@@ -9,14 +9,12 @@ const oneYearLater= function(){
 
 const ticketSchema= new Schema({
     seat:{type: String, match: /[A-F][1-9]\d?/},
-    cabinClass:{String, enum:['Economy', 'Premium Economy','Business', 'First Class']},
-    price:{type: Number, min: 0},
-    
+    cabinClass:{type: String, enum:['Economy', 'Premium Economy','Business', 'First Class'], default: ''},
+    price:{type: Number, min: 0, default:200},
 
 },{
     timestamps: true
 })
-
 
 const flightSchema = new Schema({
     airline: {type: String, enum:['American', 'Southwest', 'United', 'Delta', 'jetBlue', 'Frontier', 'Spirit'], default:''},

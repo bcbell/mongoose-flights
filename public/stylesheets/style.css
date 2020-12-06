@@ -80,7 +80,6 @@ table.flightTable{
   color: blue;
   border: 5px solid black;
   margin-top: 20px;
-  
  
 }
 th{
@@ -120,4 +119,19 @@ p.bookFlight{
   width: 20%;
 }
 
+/* Tickets- show page */
+section.tickets{
+  background-color: white;
+}
+td.seat, td.cabinClass,td, td.price{
+  color: blue; 
+}
+h5.noTicket{
+  color: white;
+  text-align: center;
+  font-variant-caps: all-small-caps;
+  border: black 5px solid;
+  outline: solid blue 5px;
+  background-color: blue;
 
+}

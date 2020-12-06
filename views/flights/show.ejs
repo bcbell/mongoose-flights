@@ -47,7 +47,7 @@
       <br>
       <br>
       <section class="bookTicket">
-        <form class="ticketingInfo" action="flights/<%=flight.id%>" method="POST" > 
+        <form class="ticketingInfo" method="POST" action="/flights/<%=flights._id%>/tickets"> 
           <p class="bookFlight">Book a flight</p>
           <label for="cabinClass">Best Cabin Fares</label>
           <select name="cabinClass" class="cabinClass">
@@ -59,70 +59,47 @@
             </optgroup>
           </select>
           <br>
+          Seat Selection:<input name="seat" required pattern="[A-F][1-9]\d?" placeholder="A10">
           <br>
-          <label for="seat">Seat Selection: </label>
-          <select name="seat" class="seat">
-              <optgroup label="A-F">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-              </optgroup>
-            </select>
-            <select>
-            <optgroup label="1-9">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </optgroup>
-          </select>
-          <select>
-            <optgroup label="0-9">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </optgroup>
-          </select>
-          <br>
-          <br>
-          <div>
-            <label for="price">Price :</label>
-            <input id="price" type="range" min="0" max=10000 value="0" name="price" step="1" onChange="change();"> $<span id="result">0</span>
-          </div>
-         <script>
-             const result = document.getElementById("result");
-             const price = document.getElementById("price");
-              function change(){
-              result.innerText = price.value;
-            }
-        </script>
-        <br>
-        <input class="bookFlight" type="submit" value="Book Flight">
-
+          Price: $<input class="price" name="price" type="number" min="0">
+          <br> 
+          <input class="bookFlight" type="submit" value="Book Flight">
         </form>
-      </section>
-
-      <% flights.tickets.forEach(function(tick){%>
-            <%= tick.seat  %> 
-            <%= tick.cabinClass %> 
-            <%= tick.price %> 
-          
-
-     <% }) %> 
+      </section> 
+        <br>
+        <br>
+      <section class="tickets">
+        <% if (flights.tickets.length){ %> 
+      <table>
+        <thead class="tickets">
+          <tr>
+            <th colspan="3">Ticketing Details</th>
+          </tr>
+          <tr>
+            <th>Cabin </th>
+            <th>Ticket Seat</th>
+            <th>Ticket Price</th>  
+          </tr>
+        </thead>
+        <tbody>
+          <% let total = 0 %> 
+          <% flights.tickets.forEach(function(t){  %> 
+            <% total += t.price %> 
+         <tr>
+          <td class="cabinClass"><%= t.cabinClass %> </td>
+          <td class="seat"><%= t.seat%> </td>
+          <td class="price">$<%= t.price %> </td>
+        </tr>
+      <% }); %>
+      <tr>
+        <td colspan="2">Total</td>
+        <td><strong>$<%=(total / flights.tickets.length.toFixed(1))%></strong></td>
+      </tr> 
+    </tbody>
+</table>
+<% }else{ %> 
+  <strong><h5 class="noTicket"> No tickets have been requested for this flight</h5></strong>
+<% } %> 
+</section>
 </body>
 </html>
