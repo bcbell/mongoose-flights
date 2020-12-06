@@ -7,7 +7,7 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-
+  font-variant-caps: petite-caps;
   color: white;
 }
 a {
@@ -94,7 +94,6 @@ th{
 td{
   border: solid 2px black;
   text-align: center;
-  font-variant-caps: petite-caps;
 }
 
 /* Flight Details- show page */
