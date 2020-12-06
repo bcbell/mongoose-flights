@@ -5,7 +5,9 @@ module.exports= {
 }
 
 function show(req, res){
-        res.render('tickets/show', { ticket: Ticket.findById(req.params.id), title: `Departure Ticket: ${flight.flightNo} `})
+    Ticket.findById(req.params.id, function(err, flight){
+       res.render('tickets/show', {title: `Departure Ticket: ${flight.flightNo} `})
+})
 }
 
 
