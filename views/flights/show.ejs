@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Flight Log</title>
+    <title>Ticketing</title>
 </head>
 <body class="flightsIndex">
 
@@ -18,6 +18,27 @@
           <a href="/flights/new">Flight Search</a>
         </nav>
       </header> 
+
+      <table class="flightTable" >
+        <tr class="flightTableHeading">
+        
+            <th>Airline</th>
+            <th>Departure Airport</th>
+            <th>Arrival Airport</th>
+            <th>Flight Departure Number</th>
+            <th>Flight Arrival Number </th>
+            <th>Departure Date & Time</th>
+            <th>Return Date & Time</th>
+        </tr>
+        <tr>
+          <td><%= flights.airline  %> </td>
+          <td><%= flights.airport  %> </td>
+          <td><%= flights.arrivalFlightNo  %> </td>
+          <td><%= flights.flightNo  %> </td>
+          <td><%= flights.arrivalFlightNo  %> </td>
+          <td><%= flights.departs  %> </td>
+          <td><%= flights.returns  %> </td>
+        </tr>
 
 </body>
 </html>
