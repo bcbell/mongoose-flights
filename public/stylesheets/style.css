@@ -98,10 +98,18 @@ td{
 
 /* Flight Details- show page */
 
-p.flightDetails{
+p.flightDetails, p.bookFlight{
   text-align: center;
   color: white;
-  font-variant-caps: petite-caps;
   text-decoration-line:  underline;
   font-weight: bold;
 }
+.range-wrap {
+  position: relative;
+  margin: 0 auto 3rem;
+}
+#price{
+  width: 20%;
+}
+
+

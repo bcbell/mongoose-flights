@@ -20,7 +20,8 @@
       </header> 
 
       <p class="flightDetails">Please review & confirm the flight details below</p>
-
+      
+      <section>
       <table class="flightTable" >
         <tr class="flightTableHeading">
         
@@ -41,10 +42,37 @@
           <td><%= flights.departs  %> </td>
           <td><%= flights.returns  %> </td>
         </tr>
-        <section>
-<p>Book a flight</p>
+        </table>
+      </section>
+      <br>
+      <br>
+      <section>
         <form class="ticketingInfo" action="flights/<%=flights.id%>/tickets" method="POST" > 
+          <p class="bookFlight">Book a flight</p>
+          <label for="cabinClass">Best Cabin Fares</label>
+          <select name="cabinClass" class="cabinClass">
+            <optgroup label="Cabin Fares">
+              <option value="Economy">Basic Economy</option>
+              <option value="Premium Economy">Premium Economy</option>
+              <option value="Business">Business</option>
+              <option value="First Class">First Class</option>
+            </optgroup>
+          </select>
+          <br>
+          <form>
+            <label for="price">Price :</label>
+            <input id="price" type="range" min="0" max=10000 value="0" name="price" step="1" onChange="change();"> $<span id="result">0</span>
+          </form>
+
+         <script>
+             const result = document.getElementById("result");
+             const price = document.getElementById("price");
+              function change(){
+              result.innerText = price.value;
+            }
+        </script>
+
         </form>
-        </section>
+      </section>
 </body>
 </html>
