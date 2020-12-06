@@ -80,6 +80,7 @@ table.flightTable{
   color: blue;
   border: 5px solid black;
   margin-top: 20px;
+  
  
 }
 th{
@@ -87,6 +88,8 @@ th{
   padding: 0px 50px 0px 50px;
   text-align: center;
   width: 100%;
+  padding: 0px;
+  background-color: rgba(128, 128, 128, 0.579);
 }
 td{
   border: solid 2px black;

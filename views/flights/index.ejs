@@ -19,24 +19,37 @@
         </nav>
       </header> 
     <section class = "flightLog">
+        <form  id= 'ticketForm' method="POST" action="/flights/tickets/<%=flights.id %>">
         <table class="flightTable" >
             <tr class="flightTableHeading">
             
                 <th>Airline</th>
-                <th>Airport</th>
+                <th>Departure Airport</th>
+                <th>Arrival Airport</th>
                 <th>Flight Departure Number</th>
+                <th>Flight Arrival Number </th>
                 <th>Departure Date & Time</th>
+                <th>Return Date & Time</th>
             </tr>
             <tr class="flightrow">
             <% flights.forEach(function(flight){%>
-                <td class="airline"><%=flight.airline%></td> 
+                
+                <td class="airline">
+                    <br>
+                    <a href="flights/tickets/<%=flight.id%>"><%=flight.airline%></a>
+            
+                </td> 
                 <td class="airport"><%=flight.airport%></td>
+                <td class =arrivalAirport><%=flight.arrivalAirport%> </td>
+                <td class= "arrivalFlightNo"><%=flight.arrivalFlightNo%></td>
                 <td class= "flightNo"><%=flight.flightNo%></td>
                 <td class="departs"><%=flight.departs%></td> 
+                <td class="departs"><%=flight.returns%></td> 
             
              </tr>
              <% }) %>  
        </table>
+    </form>
        
     </section>
 </body>
