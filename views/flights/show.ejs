@@ -104,8 +104,6 @@
             <label for="price">Price :</label>
             <input id="price" type="range" min="0" max=10000 value="0" name="price" step="1" onChange="change();"> $<span id="result">0</span>
           </div>
-
-
          <script>
              const result = document.getElementById("result");
              const price = document.getElementById("price");
@@ -113,8 +111,8 @@
               result.innerText = price.value;
             }
         </script>
-
-        <input class="bookFlight" type="submit" value="Submit">
+        <br>
+        <input class="bookFlight" type="submit" value="Book Flight">
 
         </form>
       </section>
