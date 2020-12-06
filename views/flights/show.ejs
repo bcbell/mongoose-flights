@@ -36,7 +36,7 @@
         <tr>
           <td><%= flights.airline  %> </td>
           <td><%= flights.airport  %> </td>
-          <td><%= flights.arrivalFlightNo  %> </td>
+          <td><%= flights.arrivalAirport %> </td>
           <td><%= flights.flightNo  %> </td>
           <td><%= flights.arrivalFlightNo  %> </td>
           <td><%= flights.departs  %> </td>
@@ -47,7 +47,7 @@
       <br>
       <br>
       <section class="bookTicket">
-        <form class="ticketingInfo" action="flights/<%=flights.id%>/tickets" method="POST" > 
+        <form class="ticketingInfo" action="flights/<%=flight.id%>" method="POST" > 
           <p class="bookFlight">Book a flight</p>
           <label for="cabinClass">Best Cabin Fares</label>
           <select name="cabinClass" class="cabinClass">
@@ -116,5 +116,13 @@
 
         </form>
       </section>
+
+      <% flights.tickets.forEach(function(tick){%>
+            <%= tick.seat  %> 
+            <%= tick.cabinClass %> 
+            <%= tick.price %> 
+          
+
+     <% }) %> 
 </body>
 </html>
