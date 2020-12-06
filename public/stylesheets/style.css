@@ -97,12 +97,20 @@ td{
 }
 
 /* Flight Details- show page */
-
+section.bookTicket{
+  background-color: black;
+  border: 5px solid blue;
+}
 p.flightDetails, p.bookFlight{
   text-align: center;
   color: white;
   text-decoration-line:  underline;
   font-weight: bold;
+}
+p.bookFlight{
+  background-color: grey;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
 }
 .range-wrap {
   position: relative;

@@ -46,7 +46,7 @@
       </section>
       <br>
       <br>
-      <section>
+      <section class="bookTicket">
         <form class="ticketingInfo" action="flights/<%=flights.id%>/tickets" method="POST" > 
           <p class="bookFlight">Book a flight</p>
           <label for="cabinClass">Best Cabin Fares</label>
@@ -59,10 +59,52 @@
             </optgroup>
           </select>
           <br>
-          <form>
+          <br>
+          <label for="seat">Seat Selection: </label>
+          <select name="seat" class="seat">
+              <optgroup label="A-F">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+              </optgroup>
+            </select>
+            <select>
+            <optgroup label="1-9">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </optgroup>
+          </select>
+          <select>
+            <optgroup label="0-9">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </optgroup>
+          </select>
+          <br>
+          <br>
+          <div>
             <label for="price">Price :</label>
             <input id="price" type="range" min="0" max=10000 value="0" name="price" step="1" onChange="change();"> $<span id="result">0</span>
-          </form>
+          </div>
+
 
          <script>
              const result = document.getElementById("result");
@@ -71,6 +113,8 @@
               result.innerText = price.value;
             }
         </script>
+
+        <input class="bookFlight" type="submit" value="Submit">
 
         </form>
       </section>
