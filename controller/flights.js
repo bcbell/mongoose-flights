@@ -27,7 +27,7 @@ function create (req, res, next){
 
 function show(req, res){
     Flight.findById(req.params.id, function(err, flight){
-      res.render('flights/show', {title: 'Flight Information', flights: flight})  
+      res.render('flights/show', {title: 'Ticket Information', flights: flight})  
     })
     
 }

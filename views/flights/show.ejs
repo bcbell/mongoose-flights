@@ -11,13 +11,35 @@
 <body class="flightsIndex">
 
     <header>
-        <h1><%= title %></h1>
+        <h1>Ticket Details for Flight <%=flightNo  %> </h1>
         <nav>
           <a href="/">Home</a>
           <a href="/flights">Flight Log </a>
           <a href="/flights/new">Flight Search</a>
         </nav>
       </header> 
+
+    </select> 
+    <br>
+    <br> Choose an arrival location:<select name="arrivalAirport" class="flightLocator">
+       <optgroup label="California">
+       <option value ="LAX">Los Angeles, CA- Los Angeles Internation</option>
+       <optgroup label="Colorado">
+       <option value="DEN">Denver, CO- Denver International</option>
+     </optgroup>
+       <option value="SAN">San Diego, CA- San Diego</option>
+     </optgroup>
+      <optgroup label="Georgia">
+       <option value="ATL">Atlanta, GA- Hartsfield-Jackson International</option>
+     </optgroup>
+     <optgroup label="New York">
+        <option value="JFK">New York- John F. Kennedy International</option>
+     </optgroup>
+     <optgroup label="Texas">
+       <option value="AUS">Austin, TX- Austin Bergstrom International</option>
+       <option value="DFW">Dallas/Fort Worth, TX- Dallas/Forth International</option>
+       </optgroup>
+   </select> 
 
 </body>
 </html>

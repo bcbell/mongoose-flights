@@ -4,6 +4,6 @@ const ticketsCtrl = require('../controller/tickets')
 
 
 
-// router.get('/:id', ticketsCtrl.show)
+router.get('/:id', ticketsCtrl.show)
 
 module.exports =router;

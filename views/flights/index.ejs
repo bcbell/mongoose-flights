@@ -19,7 +19,7 @@
         </nav>
       </header> 
     <section class = "flightLog">
-        <form  id= 'ticketForm' method="POST" action="/flights/tickets/<%=flights.id %>">
+    
         <table class="flightTable" >
             <tr class="flightTableHeading">
             
@@ -36,9 +36,9 @@
                 
                 <td class="airline">
                     <br>
-                    <a href="flights/tickets/<%=flight.id%>"><%=flight.airline%></a>
+                    <a  href="flights/tickets/<%=flight._id%>"><button>Details</button></a>
             
-                </td> 
+                <%=flight.airline%></td> 
                 <td class="airport"><%=flight.airport%></td>
                 <td class =arrivalAirport><%=flight.arrivalAirport%> </td>
                 <td class= "arrivalFlightNo"><%=flight.arrivalFlightNo%></td>
@@ -49,7 +49,7 @@
              </tr>
              <% }) %>  
        </table>
-    </form>
+   
        
     </section>
 </body>
