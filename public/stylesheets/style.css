@@ -158,6 +158,6 @@ h5.noTicket{
 /* Destinations - new destination page */
 section.destination{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background-color: grey;
 }
