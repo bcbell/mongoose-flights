@@ -26,6 +26,7 @@ header{
   opacity: 75%;
 }
 header.indexPage{
+  margin-top: 30px;
   width: 100%;
  
 }
