@@ -71,6 +71,10 @@ input.flightLocation{
   padding: 15px 30px 15px 30px;
   padding: 20px;
 }
+label.flightLocation{
+  color: white;
+  background-color: black;
+}
 form.flightLocator{
 color: white;
 }
@@ -95,10 +99,9 @@ table.flightTable{
 }
 th{
   border: solid 2px black;
-  padding: 0px 50px 0px 50px;
   text-align: center;
   width: 100%;
-  padding: 0px;
+  padding: 20px;
   background-color: rgba(128, 128, 128, 0.579);
 }
 td{
@@ -137,6 +140,11 @@ section.tickets{
 td.seat, td.cabinClass,td, td.price{
   color: blue; 
 }
+
+th.ticketingDetails{
+  background-color: grey;
+  border: outset 5px blue;
+}
 h5.noTicket{
   color: white;
   text-align: center;
@@ -144,5 +152,11 @@ h5.noTicket{
   border: black 5px solid;
   outline: solid blue 5px;
   background-color: blue;
+}
 
+/* Destinations - new destination page */
+section.destination{
+  display: flex;
+  justify-content: center;
+  background-color: grey;
 }

@@ -10,8 +10,8 @@ const oneYearLater= function(){
 const ticketSchema= new Schema({
     seat:{type: String, match: /[A-F][1-9]\d?/},
     cabinClass:{type: String, enum:['Economy', 'Premium Economy','Business', 'First Class'], default: ''},
+    flightType:{type: String, enum:['Round Trip', 'One Way', 'Multi-City'], default:'Round Trip'},
     price:{type: Number, min: 0, default:200},
-
 },{
     timestamps: true
 })
@@ -24,7 +24,8 @@ const flightSchema = new Schema({
     arrivalFlightNo:{type: Number, required: [true,'Please enter your arrival flight number'], min:10, max:9999, default: ''},
     departs: {type:Date,  max: [oneYearLater, "Please select another date less than one calendar year"],default: new Date(Date.now()+365*24*60*60*1000)},  
     returns:{type: Date},
-    tickets: [ticketSchema] 
+    tickets: [ticketSchema], 
+    destinations:[{type: Schema.Types.ObjectId, ref: 'Destination'}]
 },{
     timestamps: true
 })
