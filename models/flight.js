@@ -25,7 +25,7 @@ const flightSchema = new Schema({
     departs: {type:Date,  max: [oneYearLater, "Please select another date less than one calendar year"],default: new Date(Date.now()+365*24*60*60*1000)},  
     returns:{type: Date},
     tickets: [ticketSchema], 
-    destinations:[{type: Schema.Types.ObjectId, ref: 'Destination'}]
+    destinations:{type: Schema.Types.ObjectId, ref: 'Destination'}
 },{
     timestamps: true
 })
