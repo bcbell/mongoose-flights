@@ -33,7 +33,10 @@
             <th>Flight Arrival Number </th>
             <th>Departure Date & Time</th>
             <th>Return Date & Time</th>
-            <th>Flight Destinations</th>
+            <th>Flight Destination  <select>
+              <option>Destination ID </option>
+            </select>
+            <input type="submit" value="Add Destination"></th>
         </tr>
         <tr>
           <td><%= flights.airline  %> </td>
@@ -43,11 +46,10 @@
           <td><%= flights.arrivalFlightNo  %> </td>
           <td><%= flights.departs  %> </td>
           <td><%= flights.returns  %> </td>
+          <td>Flight Destination Here</td>
         </tr>
         </table>
       </section>
-
-
       <br>
       <br>
       <section class="bookTicket">
