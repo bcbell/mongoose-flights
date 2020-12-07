@@ -18,19 +18,18 @@
           <a href="/destinations/new" >Flight Destinations</a>
         </nav>
       </header> 
-    <section>
         <br>
         <br>
     <section class="destination">
-    <h3>Flight destination:</h3>
-    <select multiple >
+      
+    <h3>Flight destination:</h3> 
+    <br>
+    <select multiple class="destination" >
         <% destinations.forEach(function(d){ %>
-           <optgroup label="Destination Airport">  
-                <option><%=d.airport %></option>
-            </optgroup>
-            <optgroup label="Locations">
-                <option><%= d.location  %> </option>
-            </optgroup>
+        <optgroup label="Destination Airport/Location">
+            <option><%=d.airport %> -Airport</option>
+            <option><%= d.location  %> -Location </option>
+        </optgroup>
 
         <% }) %> 
     </select>
@@ -46,17 +45,5 @@
     <input type="submit" value="Add Destination">
 </form>
 </section>
-<br>
-<br>
-<section>
-    <table>
-        <thead>
-            <th>Destination Location</th>
-            <th>Destination Airport</th>
-        </thead>
-        <tbody>
-            <td><% destinations.airport %> </td>
-
-        </tbody>
-    </table>
-</section>
+</body>
+</html>
