@@ -104,7 +104,7 @@ table.flightTable{
 th{
   border: solid 2px black;
   text-align: center;
-  /* width: 100%; */
+  width: 100%;
   padding: 20px;
   background-color: rgba(128, 128, 128, 0.579);
 }
@@ -136,7 +136,9 @@ p.bookFlight{
 #price{
   width: 20%;
 }
-
+/* option.destinations{
+  background-color:orange ;
+} */
 /* Tickets- show page */
 section.tickets{
   background-color: white;

@@ -51,10 +51,10 @@
           <td><%= flight.arrivalFlightNo  %> </td>
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
-         <% if (flight.destinations.length){%>  
+          <td><% if (flight.destinations.length){%>  
            <% destination.forEach(function(d){%>
-          <td><%= d.destination%></td>
-        <% })%>
+       <option class="destinations"><%= d.destination%></option>
+        <% })%></td>
         <%} else{%>
         <td>No additional destinations selected</td>
         <%}%>
@@ -95,7 +95,7 @@
       <section class="tickets">
         <% if (flight.tickets.length){ %> 
      <form  class="delete-form" name="_method" action="/flights/<%=flight._id%>?_method=DELETE" method="POST">     
-      <table>
+      <table >
         <thead class="tickets">
           <tr>
             <th class="ticketingDetails" colspan="4">Ticketing Details</th>
