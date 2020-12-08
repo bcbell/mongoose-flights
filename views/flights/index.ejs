@@ -33,22 +33,22 @@
                 <th>Return Date & Time</th>
             </tr>
             <tr class="flightrow">
-
+            <% flight.forEach(function(flight){%>
                 
                 <td class="airline">
                     <br>
-                    <a href="flights/<%=flights.id%>"><button>Ticketing Details ➡  </button></a><%=flights.airline%>
+                    <a href="flights/<%=flight._id%>"><button>Ticketing Details ➡  </button></a><%=flight.airline%>
             
                 </td> 
-                <td class="airport"><%=flights.airport%></td>
-                <td class =arrivalAirport><%=flights.arrivalAirport%> </td>
-                <td class= "arrivalFlightNo"><%=flights.arrivalFlightNo%></td>
-                <td class= "flightNo"><%=flights.flightNo%></td>
-                <td class="departs"><%=flights.departs%></td> 
-                <td class="departs"><%=flights.returns%></td> 
+                <td class="airport"><%=flight.airport%></td>
+                <td class =arrivalAirport><%=flight.arrivalAirport%> </td>
+                <td class= "arrivalFlightNo"><%=flight.arrivalFlightNo%></td>
+                <td class= "flightNo"><%=flight.flightNo%></td>
+                <td class="departs"><%=flight.departs%></td> 
+                <td class="departs"><%=flight.returns%></td> 
             
              </tr>
-            
+             <% }) %>  
        </table>  
     </section>
 </body>

@@ -23,8 +23,10 @@
     <section class="destination">
         <h3>Flight destination:</h3> 
         <br>
-    
-
+        <select>
+            <%-destinations.map(d=>`<option value= "${d._id}">${d.destination}</option>`) %> 
+            
+        </select>
     <br>
     <br>
   <form class="destination-form" action="/destinations/new" method="POST">
