@@ -1,3 +1,4 @@
+const destination = require('../models/destination')
 const Flight = require('../models/flight')
 
 module.exports= {
@@ -23,12 +24,23 @@ function create (req, res, next){
     if(req.body.departs) req.body.departs > Date.now()+ 365*24*60*60000             
     res.redirect('/flights')  
 }
-
 function show(req, res){
-    Flight.findById(req.params.id, function(err, flight){
-      res.render('flights/show', {title: `Flight Details`, flights: flight})  
+    Flight.findById(req.params.id)
+    .populate('destinations').exec(function(err, flight){
+        destination.find({_id:{$nin: flight.destinations}}, function(err,
+            destinations){
+                console.log(destination)
+                res.render('flights/show', {title: 'Flight Details',flight, destinations})
+            })
     })
-    
 }
+
+// function show(req, res){
+//     Flight.findById(req.params.id, function(err, flight){
+//       res.render('flights/show', {title: `Flight Details`, flights: flight})  
+//     })
+    
+// }
+
 
 

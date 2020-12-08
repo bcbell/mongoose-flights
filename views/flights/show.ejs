@@ -34,26 +34,29 @@
             <th>Departure Date & Time</th>
             <th>Return Date & Time</th>
             <th>Flight Destination  <select>
-              <option>Destination ID </option>
+             <% destinations.forEach(function(d){%>
+               <option><%=d.destination%> </option>
+            <% })%>
+              
             </select>
-            <input type="submit" value="Add Destination"></th>
+            <input type="submit" value="Add Destination"></th>`
         </tr>
         <tr>
-          <td><%= flights.airline  %> </td>
-          <td><%= flights.airport  %> </td>
-          <td><%= flights.arrivalAirport %> </td>
-          <td><%= flights.flightNo  %> </td>
-          <td><%= flights.arrivalFlightNo  %> </td>
-          <td><%= flights.departs  %> </td>
-          <td><%= flights.returns  %> </td>
-          <td>Flight Destination Here</td>
+          <td><%= flight.airline  %> </td>
+          <td><%= flight.airport  %> </td>
+          <td><%= flight.arrivalAirport %> </td>
+          <td><%= flight.flightNo  %> </td>
+          <td><%= flight.arrivalFlightNo  %> </td>
+          <td><%= flight.departs  %> </td>
+          <td><%= flight.returns  %> </td>
+          <td><%= flight.destinations%></td>
         </tr>
         </table>
       </section>
       <br>
       <br>
       <section class="bookTicket">
-        <form class="ticketingInfo" method="POST" action="/flights/<%=flights._id%>/tickets"> 
+        <form class="ticketingInfo" method="POST" action="/flights/<%=flight._id%>/tickets"> 
           <p class="bookFlight">Book a flight</p>
           <div class="flightType">
             <input type="radio" name=flightType value="Round Trip">Round Trip
@@ -81,8 +84,8 @@
         <br>
         <br>
       <section class="tickets">
-        <% if (flights.tickets.length){ %> 
-     <form  class="delete-form" name="_method" action="/flights/<%=flights._id%>?_method=DELETE" method="POST">     
+        <% if (flight.tickets.length){ %> 
+     <form  class="delete-form" name="_method" action="/flights/<%=flight._id%>?_method=DELETE" method="POST">     
       <table>
         <thead class="tickets">
           <tr>
@@ -97,7 +100,7 @@
         </thead>
         <tbody>
           <% let total = 0 %> 
-          <% flights.tickets.forEach(function(t){  %> 
+          <% flight.tickets.forEach(function(t){  %> 
             <% total += t.price %> 
          <tr>
           <td class="flightType"><input name="_method" type="submit" value="Delete" ><%=t.flightType %></td>
@@ -108,7 +111,7 @@
       <% }); %>
       <tr>
         <td colspan="3">Total</td>
-        <td><strong>$<%=(total / flights.tickets.length.toFixed(1))%></strong></td>
+        <td><strong>$<%=(total / flight.tickets.length.toFixed(1))%></strong></td>
       </tr> 
     </tbody>
 </table>
