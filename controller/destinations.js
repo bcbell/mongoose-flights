@@ -21,7 +21,8 @@ function create(req, res){
 
 function addDestination(req, res){
     Flight.findById(req.params.id, function(err, flight){
-        flight.push(req.body.destination)
+        flight.destinations.push(req.body.destinations)
+        console.log(req.body.destinations)
         flight.save(function(err){
             res.redirect(`/flights/${flight._id}`)
         })

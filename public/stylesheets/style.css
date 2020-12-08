@@ -100,12 +100,11 @@ table.flightTable{
   color: blue;
   border: 5px solid black;
   margin-top: 20px;
- 
 }
 th{
   border: solid 2px black;
   text-align: center;
-  width: 100%;
+  /* width: 100%; */
   padding: 20px;
   background-color: rgba(128, 128, 128, 0.579);
 }

@@ -4,9 +4,9 @@ const flightsCtrl =require('../controller/flights')
 
 
 /* route to render all flights. */
-router.get('/', flightsCtrl.index)
 router.get('/new', flightsCtrl.new)
-router.get('/:id', flightsCtrl.show)
 router.post('/', flightsCtrl.create)
+router.get('/', flightsCtrl.index)
+router.get('/:id', flightsCtrl.show)
 
 module.exports = router;

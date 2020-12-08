@@ -33,13 +33,15 @@
             <th>Flight Arrival Number </th>
             <th>Departure Date & Time</th>
             <th>Return Date & Time</th>
-            <th>Flight Destination  <select>
-             <% destinations.forEach(function(d){%>
+            <th>Flight Destination  
+             <form id="add-destination" method="POST" action="/flights/<%=flight._id%>/destinations">
+              <select name="destination">
+              <% destination.forEach(function(d){%>
                <option><%=d.destination%> </option>
-            <% })%>
-              
+               <% })%>  
             </select>
-            <input type="submit" value="Add Destination"></th>`
+            <input type="submit" value="Add Destination"></th>
+        </form>
         </tr>
         <tr>
           <td><%= flight.airline  %> </td>
@@ -49,8 +51,15 @@
           <td><%= flight.arrivalFlightNo  %> </td>
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
-          <td><%= flight.destinations%></td>
-        </tr>
+         <% if (flight.destinations.length){%>  
+           <% destination.forEach(function(d){%>
+          <td><%= d.destination%></td>
+        <% })%>
+        <%} else{%>
+        <td>No additional destinations selected</td>
+        <%}%>
+
+      </tr>
         </table>
       </section>
       <br>
@@ -59,7 +68,7 @@
         <form class="ticketingInfo" method="POST" action="/flights/<%=flight._id%>/tickets"> 
           <p class="bookFlight">Book a flight</p>
           <div class="flightType">
-            <input type="radio" name=flightType value="Round Trip">Round Trip
+            <input type="radio" name= "flightType" value="Round Trip">Round Trip
             <input type="radio" name="flightType" value="One Way">One Way
             <input type="radio" name="flightType" value="Multi-City Way">Multi-City
           </div>
