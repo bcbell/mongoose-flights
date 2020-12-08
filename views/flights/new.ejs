@@ -20,7 +20,7 @@
       </header> 
       <section>
         <form class="flightLocator" action="/flights" method="POST" name="flightInfo"> 
-         <br><label> Choose a departure location:</label><select name="airport" class="flightLocator">
+         <br><label class="flightLocation"> Choose a departure location:</label><select name="airport" class="flightLocator">
            <optgroup label="Colorado">
             <option value="DEN">Denver, CO- Denver International</option>
           </optgroup>
@@ -75,9 +75,9 @@
         <br>
         <label class="flightLocation">*Flight Arrival Number:</label> <input class="flightLocation" type="number" name="arrivalFlightNo" min= "10" max= "9999" >
         <br>
-          Departure Date/Time:<input class= "flightLocate" type="datetime-local" min="currentDate" name="departs">
+         <label class="flightLocation">Departure Date/Time:</label> <input class= "flightLocate" type="datetime-local" min="currentDate" name="departs">
           <br>
-          Return Date/Time:<input class= "flightLocate" type="datetime-local" min="currentDate" name="returns" >
+          <label class="flightLocation">Return Date/Time:</label><input class= "flightLocate" type="datetime-local" min="currentDate" name="returns" >
           <br>
         <input class="flightLocator" type="submit" value="Submit">
        
