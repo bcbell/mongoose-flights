@@ -5,7 +5,8 @@ module.exports= {
     index, 
     new: newSearch,
     show,
-    create
+    create,
+    deleteFlight
     
 }
 
@@ -34,12 +35,11 @@ function show(req, res){
     })
 }
 
-// function show(req, res){
-//     Flight.findById(req.params.id, function(err, flight){
-//       res.render('flights/show', {title: `Flight Details`, flights: flight})  
-//     })
-    
-// }
-
+function deleteFlight(req, res){
+    Flight.findByIdAndDelete(req.params.id)
+    .then(()=>{
+        res.redirect('/flights')
+    })
+}
 
 

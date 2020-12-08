@@ -37,7 +37,7 @@
              <form id="add-destination" method="POST" action="/flights/<%=flight._id%>/destinations">
               <select name="destination">
               <% destination.forEach(function(d){%>
-               <option><%=d.destination%> </option>
+               <option value="="><%=d.destination%> </option>
                <% })%>  
             </select>
             <input type="submit" value="Add Destination"></th>
@@ -51,13 +51,13 @@
           <td><%= flight.arrivalFlightNo  %> </td>
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
-          <td><% if (flight.destinations.length){%>  
+          <td class="destinations"><% if (flight.destinations.length){%>  
            <% destination.forEach(function(d){%>
-       <option class="destinations"><%= d.destination%></option>
-        <% })%></td>
+       <option><%= d.destination%></option>
+        <% })%>
         <%} else{%>
-        <td>No additional destinations selected</td>
-        <%}%>
+        No additional destinations selected
+        <%}%></td>
 
       </tr>
         </table>
@@ -70,7 +70,7 @@
           <div class="flightType">
             <input type="radio" name= "flightType" value="Round Trip">Round Trip
             <input type="radio" name="flightType" value="One Way">One Way
-            <input type="radio" name="flightType" value="Multi-City Way">Multi-City
+            <input type="radio" name="flightType" value="Multi-City">Multi-City
           </div>
           <br>
           <label for="cabinClass">Best Cabin Fares</label>
@@ -120,7 +120,7 @@
       <% }); %>
       <tr>
         <td colspan="3">Total</td>
-        <td><strong>$<%=(total / flight.tickets.length.toFixed(1))%></strong></td>
+        <td><strong>$<%=(total / flight.tickets.length.toFixed(2))%></strong></td>
       </tr> 
     </tbody>
 </table>

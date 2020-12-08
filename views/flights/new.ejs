@@ -20,7 +20,7 @@
       </header> 
       <section>
         <form class="flightLocator" action="/flights" method="POST" name="flightInfo"> 
-         <br> Choose a departure location:<select name="airport" class="flightLocator">
+         <br><label> Choose a departure location:</label><select name="airport" class="flightLocator">
            <optgroup label="Colorado">
             <option value="DEN">Denver, CO- Denver International</option>
           </optgroup>
@@ -40,7 +40,7 @@
             </optgroup>
         </select> 
         <br>
-        <br> Choose an arrival location:<select name="arrivalAirport" class="flightLocator">
+        <br><label class="flightLocation"> Choose an arrival location:</label><select name="arrivalAirport" class="flightLocator">
            <optgroup label="California">
            <option value ="LAX">Los Angeles, CA- Los Angeles Internation</option>
            <optgroup label="Colorado">
@@ -60,7 +60,7 @@
            </optgroup>
        </select> 
         <br>
-        Choose an airline:
+        <label class="flightLocation">Choose an airline:</label>
         <select name="airline"class="flightLocate">
           <option value= "Delta">Delta</option>
           <option value="American">American Airlines</option>
