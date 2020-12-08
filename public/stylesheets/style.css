@@ -50,6 +50,10 @@ nav{
 h2.errorStatus{
   display: flex;
   justify-content: center;
+  
+}
+pre{
+  color: orange;
 }
 /*Flight Search-new */
 select.flightLocator{

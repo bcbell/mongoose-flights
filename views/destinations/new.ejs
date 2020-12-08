@@ -21,26 +21,19 @@
         <br>
         <br>
     <section class="destination">
-      
-    <h3>Flight destination:</h3> 
-    <br>
-    <select multiple class="destination" >
-        <% destinations.forEach(function(d){ %>
-        <optgroup label="Destination Airport/Location">
-            <option><%=d.airport %> -Airport</option>
-            <option><%= d.location  %> -Location </option>
-        </optgroup>
+        <h3>Flight destination:</h3> 
+        <br>
+        <select>
+            <% destinations.forEach(function(d){ %>
+                <option><%=d.destination %></option>
+            <%})  %> 
+        </select>
 
-        <% }) %> 
-    </select>
     <br>
     <br>
   <form class="destination-form" action="/destinations/new" method="POST">
     <label>Destination Airport:</label>
-    <input type="text" name="airport" placeholder="DCA">
-    <br>
-    <label>Destination Location:</label>
-    <input type='text' name="location" placeholder="Washington, D.C.">
+    <input type="text" name="destination" placeholder="DCA">
     <br>
     <input type="submit" value="Add Destination">
 </form>
