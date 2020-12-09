@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-mongoose.Promise =global.Promise
 const Schema= mongoose.Schema
 
 const oneYear= 365*24*60*60000

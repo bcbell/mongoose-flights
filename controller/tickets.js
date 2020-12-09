@@ -35,4 +35,5 @@ function deleteTicket(req, res, next){
     .then(()=>{
         res.redirect(`/flights/${flights._id}`)
     })
+    .catch(()=>console.log('error'))
 }

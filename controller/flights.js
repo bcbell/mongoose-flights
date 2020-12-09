@@ -40,7 +40,7 @@ function deleteFlight(req, res, next){
     .then(()=>{
         res.redirect('/flights')
     })
-        
+        .catch(()=>console.log('error'))
     }
 
 
