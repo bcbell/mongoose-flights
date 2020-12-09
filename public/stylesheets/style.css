@@ -49,6 +49,10 @@ nav{
 #carouselExample{
   margin-top: 50px ;
 }
+h2.destinations{
+  text-align: center;
+  text-decoration-line: underline;
+}
 /* Error Page */
 h2.errorStatus{
   display: flex;
