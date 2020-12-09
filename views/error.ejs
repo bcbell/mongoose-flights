@@ -1,18 +1,11 @@
 <%-include('./partials/header')%>
  
   <body>
-    <header>
-      <h1><%= title %></h1>
+   
+
+
       <h2 class= errorStatus>Error Status: <%= error.status %></h2>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/flights">Flight Log </a>
-        <a href="/flights/new">Flight Search</a>
-        <a href="/destinations/new"> Flight Destinations</a>
-        
-      </nav>
-    </header>
-<h1><%= message %></h1> 
- <pre><%= error.stack %></pre>
+      <h1><%= message %></h1> 
+      <pre><%= error.stack %></pre>
  
- <%-include('../partials/footer')%>
+ <%-include('./partials/footer')%>
