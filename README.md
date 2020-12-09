@@ -8,7 +8,9 @@ __DEMO__
 
 __List of Technologies Used:__
 -HTML
+
 -CSS
+
 -JavaScript
 -Node.js
 -Express.js
