@@ -34,7 +34,8 @@
           <td><%= flight.arrivalFlightNo  %> </td>
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
-          <td class="destinations"><% if (flight.destinations.length){%>  
+          <td class="destinations">
+            <% if (flight.destinations.length){%>  
            <% destination.forEach(function(d){%>
        <option><%= d.destination%></option>
         <% })%>
