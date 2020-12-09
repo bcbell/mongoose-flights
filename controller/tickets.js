@@ -4,7 +4,7 @@ const flights = require('./flights')
 
 module.exports= {
     create,
-    deleteTicket
+    delete: deleteTicket
 }
 
 
@@ -18,20 +18,15 @@ function create(req, res) {
     })
   }
 
-  function deleteTicket(req, res, next){
-      Flight.findByIdAndDelete(req.params.id), function(err, flights){
-          flights.tickets.id(req.params.id).remove();
-          flight.save(function(err){
-              res.redirect(`/flights/${flights._id}`)
-          })
-      }
-  }
 
-// function deleteTicket(req, res, next){
-//     Flight.findByIdAndDelete(req.params.id)
-//     console.log(req.params.id)
-//     .then(()=>{
-//         res.redirect(`/flights/${flights._id}`)
-//     })    
-// }
+function deleteTicket(req, res, next){
+    Flight.findByIdAndDelete(req.params.flightId, function(err, flights){
+    const idx= flights.tickets.findIndex(ticket=>ticket._id ==req.params.ticketId)
+    flight.tickets.splice(idx, 1)
+    flight.save(function(err){
+              res.redirect(`/flights/${flights._id}`)
+
+})
+    }   
+    )}
         

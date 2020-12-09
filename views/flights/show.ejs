@@ -36,7 +36,7 @@
             <th>Flight Destination  
              <form id="add-destination" method="POST" action="/flights/<%=flight._id%>/destinations">
               <select name="destination">
-              <%- destination.forEach(function(d){%>
+              <% destination.forEach(function(d){%>
                <option value="="><%=d.destination%> </option>
                <% })%>  
             </select>
@@ -52,12 +52,12 @@
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
           <td class="destinations"><% if (flight.destinations.length){%>  
-           <%- destination.forEach(function(d){%>
+           <% destination.forEach(function(d){%>
        <option><%= d.destination%></option>
         <% })%>
-        <%} else{%>
+       <%} else{%>
         No additional destinations selected
-        <%}%></td>
+       <%}%></td>
 
       </tr>
         </table>
@@ -94,7 +94,7 @@
         <br>
       <section class="tickets">
         <% if (flight.tickets.length){ %> 
-     <form  class="delete-form" name="_method" action="/flights/<%=flight._id%>?_method=DELETE" method="POST">     
+     <form class= "delete-form" name="_method" action="/flights/<%=flight._id%>?_method=DELETE">    
       <table >
         <thead class="tickets">
           <tr>
@@ -112,7 +112,7 @@
           <% flight.tickets.forEach(function(t){  %> 
             <% total += t.price %> 
          <tr>
-          <td class="flightType"><input name="_method" type="submit" value="Delete" ><%=t.flightType %></td>
+          <td class="flightType"><input name="_method" type="submit" value="delete"><%=t.flightType %></form></td>
           <td class="cabinClass"><%= t.cabinClass %> </td>
           <td class="seat"><%= t.seat%> </td>
           <td class="price">$<%= t.price %> </td>
@@ -124,7 +124,7 @@
       </tr> 
     </tbody>
 </table>
-</form>
+
 <% }else{ %> 
   <strong><h5 class="noTicket"> No tickets have been requested for this flight</h5></strong>
 <% } %> 

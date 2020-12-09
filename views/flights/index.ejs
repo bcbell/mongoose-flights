@@ -23,7 +23,6 @@
      
         <table class="flightTable" >
             <tr class="flightTableHeading">
-            
                 <th>Airline</th>
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
@@ -33,11 +32,14 @@
                 <th>Return Date & Time</th>
             </tr>
             <tr class="flightrow">
-            <% flight.forEach(function(flight){%>
+            <% flights.forEach(function(flight){%>
                 
                 <td class="airline">
                     <br>
-                    <a href="flights/<%=flight._id%>"><button>Ticketing Details ➡  </button></a><%=flight.airline%>
+                   
+                    <%=flight.airline%>
+                    <a href="flights/<%=flight._id%>"><button>Ticketing Details ➡  </button></a><br>
+                    <form class="delete- form" action="/flights/<%=flight._id%>?_method=DELETE" method="POST"><button type="submit" name="_method" value="Delete Flight">Delete Flight</button>
             
                 </td> 
                 <td class="airport"><%=flight.airport%></td>
@@ -48,7 +50,8 @@
                 <td class="departs"><%=flight.returns%></td> 
             
              </tr>
-             <% }) %>  
+             <% }) %> 
+            </form> 
        </table>  
     </section>
 </body>

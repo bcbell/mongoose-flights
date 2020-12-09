@@ -35,11 +35,12 @@ function show(req, res){
     })
 }
 
-function deleteFlight(req, res){
+function deleteFlight(req, res, next){
     Flight.findByIdAndDelete(req.params.id)
     .then(()=>{
         res.redirect('/flights')
     })
-}
+        
+    }
 
 
