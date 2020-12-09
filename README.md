@@ -11,11 +11,11 @@ __List of Technologies Used:__
 - HTML
 - CSS
 - JavaScript
--Node.js
--Express.js
--MongoDB
--Bootstrap
--Google Fonts
--Canva
--Imgur
+- Node.js
+- Express.js
+- MongoDB
+- Bootstrap
+- Google Fonts
+- Canva
+- Imgur
 
