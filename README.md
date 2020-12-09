@@ -8,9 +8,9 @@ __DEMO__
 
 __List of Technologies Used:__
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 -Node.js
 -Express.js
 -MongoDB
@@ -19,15 +19,3 @@ __List of Technologies Used:__
 -Canva
 -Imgur
 
-__List of Technologies Used:__
--HTML
--CSS
--JavaScript
--BootStrap
--Postman
--APIs (listed above)
--Google Fonts
--Wireframe
--Canva
--Imgur
--YouTube
