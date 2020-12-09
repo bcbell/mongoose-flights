@@ -95,7 +95,7 @@
           <% flight.tickets.forEach(function(t){  %> 
             <% total += t.price %> 
          <tr>
-          <td class="ticketType"><button type="submit" name="_method" value="Delete Flight"><strong>Delete Ticket</strong></button><%=t.flightType %></form></td>
+          <td class="ticketType"><button class= "ticket" type="submit" name="_method" value="Delete Flight"><strong>Delete Ticket</strong></button><%=t.flightType %></form></td>
           <td class="cabinClass"><%= t.cabinClass %> </td>
           <td class="seat"><%= t.seat%> </td>
           <td class="price">$<%= t.price %> </td>

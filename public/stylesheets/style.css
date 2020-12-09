@@ -178,6 +178,9 @@ h5.noTicket{
   outline: solid blue 5px;
   background-color: blue;
 }
+button.ticket{
+  margin-right: 95px;
+}
 
 /* Destinations - new destination page */
 section.destination{
