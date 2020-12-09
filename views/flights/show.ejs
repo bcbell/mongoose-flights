@@ -94,7 +94,7 @@
         <br>
       <section class="tickets">
         <% if (flight.tickets.length){ %> 
-     <form class= "delete-form" name="_method" action="/flights/<%=flight._id%>?_method=DELETE">    
+          <form class="delete- form" action="/flights/<%=flight._id%>?_method=DELETE" method="POST"> 
       <table >
         <thead class="tickets">
           <tr>
@@ -112,7 +112,7 @@
           <% flight.tickets.forEach(function(t){  %> 
             <% total += t.price %> 
          <tr>
-          <td class="flightType"><input name="_method" type="submit" value="delete"><%=t.flightType %></form></td>
+          <td class="ticketType"><button type="submit" name="_method" value="Delete Flight"><strong>Delete Ticket</strong></button><%=t.flightType %></form></td>
           <td class="cabinClass"><%= t.cabinClass %> </td>
           <td class="seat"><%= t.seat%> </td>
           <td class="price">$<%= t.price %> </td>

@@ -177,3 +177,26 @@ select.destination{
   padding: 40px;
   border: 5px solid blue;
 }
+input.destination{
+  color: blue;
+  font-variant-caps: all-small-caps;
+  background-color: white;
+  outline: 2px solid rgb(88, 88, 241);
+  font-size: 15px;
+}
+thead.destination{
+  color: white;
+}
+
+table.hover{
+  background-color: orange;
+}
+#heading{
+  color: blue;
+}
+#chart{
+  color: white;
+}
+#codes{
+  color: white;
+}
