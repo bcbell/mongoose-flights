@@ -1,15 +1,7 @@
 <%-include('../partials/header')%>
 
 <body class="newSearch">
-    <header>
-        <h1><%= title %></h1>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/flights">Flight Log</a>
-          <a href="/flights/new">Flight Search</a>
-          <a href="/destinations/new">Flight Destinations</a>
-        </nav>
-      </header> 
+
       <section>
         <form class="flightLocator" action="/flights" method="POST" name="flightInfo"> 
          <br><label class="flightLocation"> Choose a departure location:</label><select name="airport" class="flightLocator">
