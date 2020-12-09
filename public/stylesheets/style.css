@@ -135,9 +135,13 @@ p.bookFlight{
 #price{
   width: 20%;
 }
-/* option.destinations{
-  background-color:orange ;
-} */
+button{
+  color: blue;
+  font-variant-caps: all-small-caps;
+  background-color: white;
+  outline: 2px solid rgb(88, 88, 241);
+  font-size: 15px;
+}
 /* Tickets- show page */
 section.tickets{
   background-color: white;
@@ -145,7 +149,9 @@ section.tickets{
 td.seat, td.cabinClass,td, td.price{
   color: blue; 
 }
-
+td.departs{
+  font-size: 18px;
+}
 th.ticketingDetails{
   background-color: grey;
   border: outset 5px blue;

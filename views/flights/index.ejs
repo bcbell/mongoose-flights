@@ -33,13 +33,11 @@
             </tr>
             <tr class="flightrow">
             <% flights.forEach(function(flight){%>
-                
-                <td class="airline">
-                    <br>
-                   
+                <td class="airline"><a href="flights/<%=flight._id%>"><button>Ticketing Details ➡  </button></a>
+                    <br><br>
                     <%=flight.airline%>
-                    <a href="flights/<%=flight._id%>"><button>Ticketing Details ➡  </button></a><br>
-                    <form class="delete- form" action="/flights/<%=flight._id%>?_method=DELETE" method="POST"><button type="submit" name="_method" value="Delete Flight">Delete Flight</button>
+                    <br>
+                    <form class="delete- form" action="/flights/<%=flight._id%>?_method=DELETE" method="POST"><br><button type="submit" name="_method" value="Delete Flight"><strong>Delete Flight</strong></button>
             
                 </td> 
                 <td class="airport"><%=flight.airport%></td>
