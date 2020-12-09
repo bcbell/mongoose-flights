@@ -46,6 +46,9 @@ nav{
   justify-content: space-around;
 
 }
+#carouselExample{
+  margin-top: 50px ;
+}
 /* Error Page */
 h2.errorStatus{
   display: flex;
@@ -212,15 +215,21 @@ table.hover{
   color: white;
 }
 
-p{
+p.destinations{
   background-color: orange;
   color: blue;
   text-align: center;
   font-weight: bold;
 }
-a{
-  color: orange;
+/* Footer*/
+p.copyright{
+  /* background-color: rgba(17, 17, 16, 0.339); */
+  color: white;
+  font-size: 18px;
+  text-align: right;
+
 }
+
 @media only screen and (min-width: 230){
   table.flightTable{
     display: block;
