@@ -3,8 +3,9 @@
 __App Overview__
 This application logs flight information, search flights and destinations while offering users the ability to create, read and delete.
 
-__DEMO__
+__DEMO:__
 
+For demo, visit 
 
 __List of Technologies Used:__
 
