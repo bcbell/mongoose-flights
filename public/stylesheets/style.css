@@ -58,43 +58,50 @@ pre{
 select.flightLocator{
   color: blue;
   border-style: 5% inset black;
-  padding: 20px;
+  font-variant-caps: all-small-caps;
 }
 select.flightLocate{
   color: blue;
   border-style: 5% inset black;
-  padding: 20px;
+  font-variant-caps: all-small-caps;
 }
 input.flightLocate{
   color: blue;
-  padding: 15px 30px 15px 30px;
-  padding: 20px;
+  font-variant-caps: all-small-caps;
 }
 input.flightLocation{
   color: blue;
-  padding: 15px 30px 15px 30px;
-  padding: 20px;
+  font-variant-caps: all-small-caps;
 }
 label.flightLocation{
   color: white;
   background-color: rgba(0, 0, 0, 0.538);
+  font-variant-caps: all-small-caps;
 }
 form.flightLocator{
 color: white;
+font-variant-caps: all-small-caps;
 }
 input.flightLocator{
-  border-radius: 40%;
-  padding: 15px 30px 15px 30px;
-  background-color: grey;
+  border-radius: 100%;
+  padding: 15px 40px 15px 40px;
   border-right-color: lightblue;
-  color: white;
   font-family: 'Libre Baskerville', serif;
-  font-size: 10px;
+  font-size: 20px;
   box-shadow: 2px 2px 2px rgba(0, 0, 255, 0.25);
   border: 2px solid blue;
+  font-variant-caps: all-small-caps;
+  color: blue;
+  font-variant-caps: all-small-caps;
+  background-color: white;
+}
+option{
+  font-variant-caps: all-small-caps;
 }
 /* Flight Log */
 table.flightTable{
+  display: table;
+  width: 100%;
   background-color: white ;
   color: blue;
   border: 5px solid black;
@@ -135,7 +142,7 @@ p.bookFlight{
 #price{
   width: 20%;
 }
-button{
+button, input.buttonDes, input.bookFlight{
   color: blue;
   font-variant-caps: all-small-caps;
   background-color: white;
@@ -187,7 +194,9 @@ input.destination{
 thead.destination{
   color: white;
 }
-
+tbody.destination{
+ overflow: scroll;
+}
 table.hover{
   background-color: orange;
 }
@@ -195,8 +204,17 @@ table.hover{
   color: blue;
 }
 #chart{
+  /* display: block; */
   color: white;
 }
+
 #codes{
   color: white;
+}
+
+@media only screen and (min-width: 230){
+  table.flightTable{
+    display: block;
+    margin: 44px 0 0 0;
+  }
 }

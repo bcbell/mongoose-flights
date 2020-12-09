@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Schedule a Flight</title>
+    <title><%= title %></title>
 </head>
 <body class="newSearch">
     <header>
@@ -41,83 +41,83 @@
   </form>
 </section>
 <br><br>
-<table id="chart" class="table table-striped table-dark table-hover">
-    <thead class= "destination">
-      <tr id="chart" class="table-light">
-        <th id= "heading" scope="col">Airport(Large Hubs)</th>
+<table  id="chart" class="table table-striped table-dark table-hover ">
+    <thead class= "destination fixed_header">
+      <tr id="charts" class="table-light">
+        <th id= "heading" scope="col"> Major US Airport Hubs</th>
         <th id= "heading" scope="col">IATA Code</th>
         <th id= "heading" scope="col">City</th>
         <th id= "heading" scope="col">State</th>
       </tr>
     </thead>
-    <tbody>
-      <tr id="chart">
+    <tbody class="destination">
+      <tr id="charts">
         <th scope="row">Hartsfield-Jackson Atlanta International Airport</th>
         <td id="codes">ATL</td>
         <td id="codes">Atlanta</td>
         <td id="codes">GA</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Los Angeles International Airport</th>
         <td id="codes">LAX</td>
         <td id="codes">Los Angeles</td>
         <td id="codes">CA</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">O'Hare International Airport</th>
         <td id="codes">ORD</td>
         <td id="codes">Chicago</td>
         <td id="codes">IL</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Dallas/ Fort Worth International Airport</th>
         <td id="codes">DFW</td>
         <td id="codes">Dallas</td>
         <td id="codes">TX</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Denver International Airport</th>
         <td id="codes">DEN</td>
         <td id="codes">Denver</td>
         <td id="codes">CO</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Orlando International Airport</th>
         <td id="codes">MCO</td>
         <td id="codes">Orlando</td>
         <td id="codes">FL</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Charlotte Douglas International Airport</th>
         <td id="codes">CLT</td>
         <td id="codes">Charlotte</td>
         <td id="codes">NC</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Miami International Airport</th>
         <td id="codes">MIA</td>
         <td id="codes">Miami</td>
         <td id="codes">FL</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">General Edward Lawrence Logan International Airport</th>
         <td id="codes">BOS</td>
         <td id="codes">Boston</td>
         <td id="codes">MA</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Washington Dulles International Airport</th>
         <td id="codes">IAD</td>
         <td id="codes">Washington D.C.</td>
         <td id="codes">VA</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Portland International Airport</th>
         <td id="codes">PDX</td>
         <td id="codes">Portland</td>
         <td id="codes">OR</td>
       </tr>
-      <tr id= "chart" class="table-hover">
+      <tr id= "charts" class="table-hover">
         <th scope="row">Daniel K. Inouye International Airport</th>
         <td id="codes">HNL</td>
         <td id="codes">Honolulu</td>
