@@ -13,6 +13,7 @@ __List of Technologies Used:__
 -Node.js
 -Express.js
 -MongoDB
+-Bootstrap
 -Google Fonts
 -Canva
 -Imgur
