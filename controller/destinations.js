@@ -28,10 +28,3 @@ function addDestination(req, res){
     })
 
 }
-function deleteDestination(req, res, next){
-    Destination.deleteAll(destination)
-    .then(()=>{
-        res.redirect('/destinations/new')
-    })
-        .catch(()=>console.log('error'))
-    }
