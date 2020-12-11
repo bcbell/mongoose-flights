@@ -5,7 +5,7 @@ This application logs flight information, search flights and destinations while 
 
 __DEMO:__
 
-For demo, visit 
+For demo, visit https://brittany-mongoose-flights.herokuapp.com/
 
 __List of Technologies Used:__
 
