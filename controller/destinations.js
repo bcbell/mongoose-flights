@@ -21,10 +21,17 @@ function create(req, res){
 
 function addDestination(req, res){
     Flight.findById(req.params.id, function(err, flight){
-        flight.destinations.push(req.body.destinations)
+        flight.destinations.push(req.body.id)
         flight.save(function(err){
             res.redirect(`/flights/${flight._id}`)
         })
     })
 
 }
+function deleteDestination(req, res, next){
+    Destination.deleteAll(destination)
+    .then(()=>{
+        res.redirect('/destinations/new')
+    })
+        .catch(()=>console.log('error'))
+    }

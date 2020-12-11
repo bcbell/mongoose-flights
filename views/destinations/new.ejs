@@ -5,21 +5,24 @@
         <br>
     <section class="destination">
         <h3>Flight destination:</h3> 
-        <br>
-        <select>
+        <br>  
+        <form class="destination-form" action="/destinations/new" method="POST">
+          <input  type="text" name="destination" placeholder="DCA">
+    <br>
+    <input class="destination" type="submit" value="Add Destinations">
+    <input class= "destination" type="reset"value="Clear Destination" onclick="(reset.value)">
+  <br>  
+   </form>
+     
+        <label>Destination Airport:</label>
+ <select >
             <% destinations.forEach(function(d){ %>
-                <option><%=d.destination %></option>
-            <%})  %> 
-        </select>
+                <option id="destinations"><%=d.destination %></option>
+         <%})%>
+        </select> 
+        <br> <br> 
     <br>
-    <br>
-  <form class="destination-form" action="/destinations/new" method="POST">
-    <label>Destination Airport:</label>
-    <input  type="text" name="destination" placeholder="DCA">
-    <br>
-    <input class="destination" type="submit" value="Add Destination">
-  </form>
-</section>
+  </section>
 <br><br>
 <h2 class="destinations"><a href="https://airportcod.es/">United States Destinations</a> </h2>
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -195,5 +198,6 @@
   </table>
 
   <p class="destinations">For a complete list of airline and location codes, visit <a href="https://www.iata.org/en/publications/directories/code-search/">IATA</a></p>
+ 
  
   <%-include('../partials/footer')%>

@@ -27,10 +27,10 @@ function create (req, res, next){
 }
 function show(req, res){
     Flight.findById(req.params.id)
-    .populate('destinations').exec(function(err, flight){
-        Destination.find({_id:{$nin: flight.destinations}}, function(err,
-            destination){
-                res.render('flights/show', {title: 'Flight Details',flight, destination})
+    .populate('destination').exec(function(err, flight){
+        Destination.find({'_id':{$nin: flight.destinations}}, function(err,destinations){
+            console.log(err)
+                res.render('flights/show', {title: 'Flight Details',flight, destinations})
             })
     })
 }

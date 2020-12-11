@@ -1,6 +1,6 @@
 <%-include('../partials/header')%>
 
-<body class="flightsIndex">
+<body class="newSearch">
 
 
       <p class="flightDetails">Please review & confirm the flight details below</p>
@@ -16,15 +16,17 @@
             <th>Flight Arrival Number </th>
             <th>Departure Date & Time</th>
             <th>Return Date & Time</th>
-            <th>Flight Destination  
-             <form id="add-destination" method="POST" action="/flights/<%=flight._id%>/destinations">
-              <select name="destination">
-              <% destination.forEach(function(d){%>
-               <option value="="><%=d.destination%> </option>
-               <% })%>  
-            </select>
-            <input class = "buttonDes" type="submit" value="Add Destination"></th>
-        </form>
+            <th>Multi-City Flight Destinations
+              
+              <form id='add-dest-to-list' action='/flights/<%= flight._id %>/destinations' method='POST'>
+                <select name='destination'>
+                  <% destinations.map(d => { %>
+                  <option  id= "destinations" value='<%= d._id %>'> <%= d.destination %></option>
+                  <% }).join('') %>
+                </select>
+                
+              </form>
+              <button type='submit'>Add Destinaton</button>
         </tr>
         <tr>
           <td><%= flight.airline  %> </td>
@@ -34,15 +36,15 @@
           <td><%= flight.arrivalFlightNo  %> </td>
           <td><%= flight.departs  %> </td>
           <td><%= flight.returns  %> </td>
-          <td class="destinations">
-            <% if (flight.destinations.length){%>  
-           <% destination.forEach(function(d){%>
-       <option><%= d.destination%></option>
-        <% })%>
-       <%} else{%>
-        No additional destinations selected
-       <%}%></td>
-
+           <td  id= "destinations"><% destinations.forEach(function(d) {  %>
+            <%if (d._id) {%> 
+            <%=` ${d.destination}`%>
+          <% }else{ %>
+         <li>No additional destinations selected</li> </td> 
+         <%}%> 
+          
+   <% })%>
+<button onclick="removeBtn()">Delete</button> 
       </tr>
         </table>
       </section>
@@ -113,4 +115,11 @@
   <strong><h5 class="noTicket"> No tickets have been requested for this flight</h5></strong>
 <% } %> 
 </section>
+
+ <script>
+  function removeBtn(){
+    const removeDes = document.getElementById('destinations');
+    removeDes.remove()
+ }
+ </script>
 <%-include('../partials/footer')%>

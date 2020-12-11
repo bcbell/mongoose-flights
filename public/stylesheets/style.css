@@ -1,4 +1,4 @@
-body {
+body.newSearch{
   padding: 50px;
   font-size: 25px;
   font-family: 'Libre Baskerville', serif;
@@ -11,8 +11,14 @@ body {
   color: white;
 }
 body.indexPage{
- background-image: url(https://i.imgur.com/4R775Uv.mp4);
- background-attachment: fixed;
+ font-variant-caps: petite-caps;
+ color: white;
+ padding: 50px;
+ font-size: 25px;
+ font-family: 'Libre Baskerville', serif;
+ background-color: black;
+ border: 5px solid white;
+
 }
 a {
   color: rgba(128, 128, 128, 0.579);
@@ -22,16 +28,19 @@ header{
   border: 5px solid black; 
   background-color: white;
   box-shadow: inset 10px 10px 90px 90px rgba(111, 111, 236, 0.661);
-  -webkit-text-stroke: .75px blue;
-  opacity: 75%;
+  -webkit-text-stroke: 2px white;
+  opacity: 85%;
+  font-weight: bold;
 }
 header.indexPage{
   margin-top: 30px;
   width: 100%;
- 
 }
 video.indexPage{
   width: 100%;
+  object-fit: cover;
+  margin-top: 25px;
+  border: solid 5px white;
 }
 h1{
   display: flex;
@@ -52,6 +61,7 @@ nav{
 h2.destinations{
   text-align: center;
   text-decoration-line: underline;
+  font-size: 55px;
 }
 /* Error Page */
 h2.errorStatus{
@@ -62,6 +72,11 @@ pre{
   color: orange;
 }
 /*Flight Search-new */
+section.flightSearch{
+  background-color: rgba(0, 0, 0, 0.627);
+  margin-top: 25px;
+  border: 5px solid blue;
+}
 select.flightLocator{
   color: blue;
   border-style: 5% inset black;
@@ -82,16 +97,18 @@ input.flightLocation{
 }
 label.flightLocation{
   color: white;
-  background-color: rgba(0, 0, 0, 0.538);
+  background-color: rgba(0, 0, 255, 0.833);
   font-variant-caps: all-small-caps;
+  outline: solid 2px white;
+  padding-right: 10px ;
+  margin-left: 20px;
 }
 form.flightLocator{
 color: white;
 font-variant-caps: all-small-caps;
 }
 input.flightLocator{
-  border-radius: 100%;
-  padding: 15px 40px 15px 40px;
+  padding: 10px ;
   border-right-color: lightblue;
   font-family: 'Libre Baskerville', serif;
   font-size: 20px;
@@ -101,6 +118,8 @@ input.flightLocator{
   color: blue;
   font-variant-caps: all-small-caps;
   background-color: white;
+  margin-bottom: 10px;
+  margin-left: 16px;
 }
 option{
   font-variant-caps: all-small-caps;
@@ -155,6 +174,7 @@ button, input.buttonDes, input.bookFlight{
   background-color: white;
   outline: 2px solid rgb(88, 88, 241);
   font-size: 15px;
+  margin-bottom: 15px;
 }
 /* Tickets- show page */
 section.tickets{

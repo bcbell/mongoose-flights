@@ -6,8 +6,6 @@ const oneYearLater= function(){
     return new Date (Date.now() + oneYear)
 }
 
-
-
 const ticketSchema= new Schema({
     seat:{type: String, match: /[A-F][1-9]\d?/},
     cabinClass:{type: String, enum:['Economy', 'Premium Economy','Business', 'First Class'], default: ''},

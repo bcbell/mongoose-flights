@@ -6,5 +6,6 @@ const destCtrl = require('../controller/destinations')
 router.get('/destinations/new', destCtrl.new)
 router.post('/destinations/new', destCtrl.create)
 router.post('/flights/:id/destinations', destCtrl.addDestination)
+router.delete('/destinations/new', destCtrl.deleteDestination)
 
 module.exports= router
